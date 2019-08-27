@@ -183,7 +183,7 @@ class _ZoomableImageState extends State<ZoomableImage> {
 
   @override
   void dispose() {
-    _imageStream.removeListener(_handleImageLoaded);
+    _imageStream.removeListener(ImageStreamListener(_handleImageLoaded));
     super.dispose();
   }
 }
