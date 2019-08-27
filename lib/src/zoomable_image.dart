@@ -171,7 +171,7 @@ class _ZoomableImageState extends State<ZoomableImage> {
 
   void _resolveImage() {
     _imageStream = widget.image.resolve(createLocalImageConfiguration(context));
-    _imageStream.addListener(_handleImageLoaded);
+    _imageStream.addListener(ImageStreamListener(_handleImageLoaded));
   }
 
   void _handleImageLoaded(ImageInfo info, bool synchronousCall) {
